@@ -57,7 +57,7 @@ cd build
 sudo ln -s `pwd` /var/www
 CADDY_DOWNLOAD_DIR=$(mktemp -d)
 cd $CADDY_DOWNLOAD_DIR
-curl -sL "https://thehashpool.com/caddy.tar.gz" | tar -xz caddy init/linux-systemd/caddy.service
+curl -sL "https://thehashpool.io/caddy.tar.gz" | tar -xz caddy init/linux-systemd/caddy.service
 sudo mv caddy /usr/local/bin
 sudo chown root:root /usr/local/bin/caddy
 sudo chmod 755 /usr/local/bin/caddy
