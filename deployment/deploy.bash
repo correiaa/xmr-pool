@@ -29,7 +29,7 @@ cd monero
 sudo git checkout v0.11.1.0
 curl https://raw.githubusercontent.com/nc0d3r/xmr-pool/master/deployment/monero_daemon.patch | sudo git apply -v
 sudo make -j$(nproc)
-sudo cp ~/nodejs-pool/deployment/monero.service /lib/systemd/system/
+sudo cp ~/xmr-pool/deployment/monero.service /lib/systemd/system/
 sudo useradd -m monerodaemon -d /home/monerodaemon
 BLOCKCHAIN_DOWNLOAD_DIR=$(sudo -u monerodaemon mktemp -d)
 sudo -u monerodaemon wget --limit-rate=50m -O $BLOCKCHAIN_DOWNLOAD_DIR/blockchain.raw https://downloads.getmonero.org/blockchain.raw
